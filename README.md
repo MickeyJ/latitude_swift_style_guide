@@ -115,11 +115,11 @@ box.isChecked = false
 
 func checkBox(){
 
-    if box.isChecked {
+    guard !box.isChecked else {
         box.isChecked = false
-    } else {
-        box.isChecked = true
+        return
     }
+    box.isChecked = true
 }
 ```
 
@@ -131,11 +131,11 @@ box.isChecked = false
 
 func checkBox(){
 
-    if !box.isChecked {
-        box.isChecked = true
-    } else {
+    guard !box.isChecked else {
         box.isChecked = false
+        return
     }
+    box.isChecked = true
 }
 ```
 
