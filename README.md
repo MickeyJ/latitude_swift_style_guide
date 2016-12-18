@@ -54,7 +54,7 @@ thing.doStuff()
 
 ``` 
 
-### Only Specify ```self``` if necessary
+### Only Specify ```self``` If Necessary
 
 Instead of:
 ```js
@@ -139,9 +139,7 @@ func checkBox(){
 }
 ```
 
-hypocrite 
-
-### Use ```guard``` over ```if```
+### Use ```guard``` Over ```if```
 
 Instead of:
 ```js
