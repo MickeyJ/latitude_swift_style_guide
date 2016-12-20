@@ -25,6 +25,27 @@ guard thing.isTrue else {
 // do stuff
 ``` 
 
+### Use ```guard``` Over ```if```
+
+Instead of:
+```js
+if !box.isChecked {
+    box.isChecked = true
+} else {
+    box.isChecked = false
+}
+```
+
+Use:
+```js
+guard !box.isChecked else {
+    box.isChecked = false
+    return
+}
+    
+box.isChecked = true
+```
+
 ### Avoid Force-Unwrapping Optionals
 
 Instead of:
@@ -105,57 +126,4 @@ class MyThing {
 }
 ```
 
-### Handle Expected Case First
 
-Instead of:
-```js
-box.isChecked = false
-
-...
-
-func checkBox(){
-
-    if box.isChecked {
-        box.isChecked = false
-    } else {
-        box.isChecked = true
-    }
-}
-```
-
-Use:
-```js
-box.isChecked = false
-
-...
-
-func checkBox(){
-
-    if !box.isChecked {
-        box.isChecked = true
-    } else {
-        box.isChecked = false
-    }
-}
-```
-
-### Use ```guard``` Over ```if```
-
-Instead of:
-```js
-if !box.isChecked {
-    box.isChecked = true
-} else {
-    box.isChecked = false
-}
-```
-
-Use:
-```js
-guard !box.isChecked else {
-    box.isChecked = false
-    return
-}
-    
-box.isChecked = true
-```
