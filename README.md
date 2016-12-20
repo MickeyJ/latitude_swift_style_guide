@@ -5,7 +5,7 @@ Swift Style Guide
 
 Only use ```var``` when you know the value will change.
 
-### Return Early
+### Return Early & Use ```guard``` Over ```if```
 
 Instead of:
 ```js
@@ -24,27 +24,6 @@ guard thing.isTrue else {
 
 // do stuff
 ``` 
-
-### Use ```guard``` Over ```if```
-
-Instead of:
-```js
-if !box.isChecked {
-    box.isChecked = true
-} else {
-    box.isChecked = false
-}
-```
-
-Use:
-```js
-guard !box.isChecked else {
-    box.isChecked = false
-    return
-}
-    
-box.isChecked = true
-```
 
 ### Avoid Force-Unwrapping Optionals
 
